@@ -1,10 +1,11 @@
 header{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
     background: yellowgreen;
     img{
-        height: 10vh;
+        height: 15vh;
+        padding-left: 2rem;
     }
     ul{
         list-style: none;
@@ -17,6 +18,7 @@ header{
             }
             .cart::after {
                     content: " 🛒 ";
+                    padding-left: 2rem;
             }
         }
     }

@@ -1,14 +1,18 @@
+
 import "./Forms.scss"
 const Forms = ({children}) => {
+    const registro = () => {
+        alert ("Usuario guardado")
+    }
     return (
         <>
         {children}
-        <div className="forms">
+        <form className="forms">
             <input className="forms__input" placeholder="Escriba su nombre"></input>
             <input className="forms__input" placeholder="Escriba su email"></input>
             <input className="forms__input" placeholder="Escriba su contraseña"></input>
-            <button>Registrarme</button>
-        </div>
+            <button onClick={registro}>Registrate</button>
+        </form>
         </>
     )
 }
