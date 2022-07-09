@@ -1,0 +1,13 @@
+.forms{
+    display: flex;
+    flex-direction: column;
+    border: 0.2rem solid black;
+    margin: 2rem;
+    padding: 2rem;
+    &__input{
+    border: 0.2rem solid yellowgreen;
+    color: yellowgreen;
+    padding: 1rem;
+    text-align: center;
+    }
+}

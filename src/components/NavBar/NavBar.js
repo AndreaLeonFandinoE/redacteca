@@ -17,10 +17,10 @@ const NavBar = () => {
                         <a href="">Ebooks</a>
                     </li>
                     <li>
-                        <a href="">Carrito</a>
+                        <a href="">Contacto</a>
                     </li>
                     <li>
-                        <a href="">Contacto</a>
+                        <a className='cart' href=""></a>
                     </li>
                 </ul>
             </div>
