@@ -2,7 +2,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: yellowgreen;
+    background: rgb(172, 48, 48);
     img{
         height: 15vh;
         padding-left: 2rem;
@@ -16,7 +16,7 @@ header{
                 color: black;
                 text-decoration: none;
             }
-            .cart::after {
+            .cart::before {
                     content: " 🛒 ";
                     padding-left: 2rem;
             }

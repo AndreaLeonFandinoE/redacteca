@@ -1,7 +1,7 @@
 const Products = [
     {
         id:1,
-        nombre: "Libro1",
+        nombre: "vieja Yo",
         precio: 200,
     },
     {
@@ -9,5 +9,7 @@ const Products = [
         nombre: "Libro2",
         precio: 400,
     },
+
+    
 ]
 export default Products

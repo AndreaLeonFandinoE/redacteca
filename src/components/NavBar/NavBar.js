@@ -1,26 +1,24 @@
 import './NavBar.scss'
-const NavBar = () => {
+const NavBar = ({numero}) => {
     return <header>
-        <img src="../../logo2.png" alt="logo" />
-        <img src="../../logo.png" alt="logo" />
         <img src="../../logoblanco.png" alt="logo" />
         <img src="../../logoblanco2.png" alt="logo" />
         <nav>
             <ul>
                 <li>
-                    <a href="#!">Inicio</a>
+                    <a href="/">Inicio</a>
                 </li>
                 <li>
-                    <a href="#!">Libros</a>
+                    <a href="/">Libros</a>
                 </li>
                 <li>
-                    <a href="#!">Ebooks</a>
+                    <a href="/">Ebooks</a>
                 </li>
                 <li>
-                    <a href="#!">Contacto</a>
+                    <a href="/">Contacto</a>
                 </li>
                 <li>
-                    <a className='cart' href="#!"></a>
+                    <a className='cart' href="/">{numero}</a>
                 </li>
             </ul>
         </nav>

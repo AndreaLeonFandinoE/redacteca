@@ -1,7 +1,7 @@
 
-const Button = ({libro, botonLibro}) => {
+const Button = ({product, cart}) => {
     return (
-    <button onClick={() => botonLibro()}>{libro}</button>
+    <button onClick={() => cart()}>{product}</button>
 )
 }
 
