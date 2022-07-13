@@ -1,8 +1,7 @@
 import './NavBar.scss'
 const NavBar = ({numero}) => {
     return <header>
-        <img src="../../logoblanco.png" alt="logo" />
-        <img src="../../logoblanco2.png" alt="logo" />
+        <img src="https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678238/samples/redacteca/logoblanco2_zq9w1p.png" alt="logo" />
         <nav>
             <ul>
                 <li>

@@ -1,9 +1,9 @@
 .forms{
     display: flex;
     flex-direction: column;
-    border: 0.2rem solid black;
     margin: 2rem;
     padding: 2rem;
+    align-items: center;
     &__input{
     border: 0.2rem solid yellowgreen;
     color: yellowgreen;
