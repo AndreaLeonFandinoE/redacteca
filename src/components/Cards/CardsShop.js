@@ -1,6 +1,7 @@
-import Cards from'./Cards'
 
+import Cards from'./Cards'
 const CardsShop = ({shop}) => {
+
     return (
         <>
         {shop.map((shop) => (

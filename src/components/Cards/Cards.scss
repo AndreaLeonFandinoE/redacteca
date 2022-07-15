@@ -7,13 +7,12 @@
     text-align: center;
     &__container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     }
     &__cards{
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
     background-color: bisque;
     padding: 1rem;
     border-radius: 1rem;

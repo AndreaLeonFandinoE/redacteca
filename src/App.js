@@ -3,8 +3,8 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar.js';
 import Button from './components/Button/Button.js';
 import ButtonCont from './components/Button/ButtonCont.js';
-import Forms from './components/Forms/Forms.js';
 import CardsContainer from './components/Cards/CardsContainer.js';
+import ListClients from './components/ListClients/ListClients.js';
 
 
 function App() {
@@ -25,10 +25,11 @@ function App() {
     <ButtonCont stock={20} initial={0}>
       <Button product="Agregar al carrito" cart={cart}/>
     </ButtonCont >
-    
-    <Forms>
+
+    <ListClients> 
       <h1>Registrate</h1>
-    </Forms>
+    </ListClients>
+      
     </div>
   );
 }
