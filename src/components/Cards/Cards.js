@@ -7,7 +7,6 @@ const Cards = ({shop}) => {
             <img className="cards__img" src={shop.img} alt={shop.alt} />
             <div className="cards__contenido">
                 <h4>{shop.name}</h4>
-                <span>{shop.description}</span>
                 <span>{shop.category}</span>
                 <span>{shop.autor}</span>
                 <h5>Precio ${shop.price}</h5>

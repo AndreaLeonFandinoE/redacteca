@@ -12,9 +12,9 @@ const Forms = () => {
     });
 
     const handleChange =(e) => {
-        console.log(e.target.name);
         setForm({
-            ...form,})
+            ...form,
+        [e.target.name] : e.tarhet.value})
     }
     return (
         

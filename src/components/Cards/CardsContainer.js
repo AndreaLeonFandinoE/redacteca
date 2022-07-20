@@ -2,10 +2,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import products from "../../products/products.js"
 import CardsShop from './CardsShop.js';
+const CardsContainer = ({titulo}) => {
 
-const Cards = ({titulo}) => {
-
-    const [shop, setItems] = useState([]);
+    const [shop, setShop] = useState([]);
     useEffect(() => {
         const Product = new Promise ((res, rej) => {
             setTimeout(() => {
@@ -13,7 +12,7 @@ const Cards = ({titulo}) => {
             }, 1200);
         });
         Product.then((resProducts) =>{
-            setItems(resProducts)
+            setShop(resProducts)
         }).catch((failProducts) => {
             alert(failProducts)
         })
@@ -29,4 +28,4 @@ const Cards = ({titulo}) => {
     )
 }
 
-export default Cards;
+export default CardsContainer;
