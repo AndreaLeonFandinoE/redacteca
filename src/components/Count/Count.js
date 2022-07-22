@@ -1,5 +1,5 @@
 import {useState} from 'react';
-const ButtonCount = ({children, stock, initial = 0, price, onAdd}) => {
+const Count = ({children, stock, initial = 0, price, onAdd}) => {
 
     const [boton, setBoton] = useState (initial)
     const botonRestar = () => {
@@ -23,9 +23,9 @@ const ButtonCount = ({children, stock, initial = 0, price, onAdd}) => {
         </div>
         <span>Total = ${boton * price}</span>
         {children}
-        <button onClick={() => onAdd(boton)}>Agregar al carrito!!!!!!!!!</button>
+        <button onClick={() => onAdd(boton)}>Agregar al carrito</button>
         </>
     )
 }
 
-export default ButtonCount
+export default Count

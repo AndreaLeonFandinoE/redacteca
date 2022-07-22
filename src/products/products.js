@@ -10,7 +10,7 @@ const products = [
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678208/samples/redacteca/libro1_mdzwly.jpg",
     },
     {
-        id:2,
+        id:"2",
         category: "libros",
         autor: "Rosa León",
         name: "Me old?",
@@ -20,7 +20,7 @@ const products = [
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678207/samples/redacteca/libro1.1_l9glyr.jpg",
     },
     {
-        id:3,
+        id:"3",
         category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
@@ -30,7 +30,7 @@ const products = [
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678208/samples/redacteca/ebook1_lrvypt.png",
     },
     {
-        id:4,
+        id:"4",
         category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
@@ -40,7 +40,7 @@ const products = [
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678208/samples/redacteca/ebook1_lrvypt.png",
     },
     {
-        id:5,
+        id:"5",
         category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
@@ -50,7 +50,7 @@ const products = [
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678208/samples/redacteca/ebook1_lrvypt.png",
     },
     {
-        id:6,
+        id:"6",
         category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
