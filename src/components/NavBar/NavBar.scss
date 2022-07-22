@@ -3,10 +3,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(150, 150, 47);
+    background: rgb(100, 138, 26);
     img{
-        height: 15vh;
+        height: 7vh;
         padding-left: 2rem;
+        margin: 1rem;
     }
     ul{
         list-style: none;
@@ -19,8 +20,17 @@ header{
             }
             .cart::before {
                     content: " 🛒 ";
-                    padding-left: 2rem;
             }
         }
+    }
+}
+
+.nav{
+    color: yellowgreen;
+    border: 0.15rem solid rgba(153, 205, 50, 0.342);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    &__active{
+        color: white;
     }
 }

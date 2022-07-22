@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import "./Button.scss"
-const ButtonCont = ({children, stock, initial}) => {
+const ButtonCount = ({children, stock, initial = 0, price, onAdd}) => {
 
     const [boton, setBoton] = useState (initial)
     const botonRestar = () => {
@@ -17,14 +16,16 @@ const ButtonCont = ({children, stock, initial}) => {
 
     return (
         <>
-        <div className='button'>
+        <div>
             <button onClick={botonRestar}>-</button>
-            <button>{boton}</button>
+            <h3>{boton}</h3>
             <button onClick={botonSumar}>+</button>
-            {children}
         </div>
+        <span>Total = ${boton * price}</span>
+        {children}
+        <button onClick={() => onAdd(boton)}>Agregar al carrito!!!!!!!!!</button>
         </>
     )
 }
 
-export default ButtonCont
+export default ButtonCount

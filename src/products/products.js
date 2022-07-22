@@ -1,7 +1,7 @@
 const products = [
     {
-        id:1,
-        category: "Libros",
+        id:"1",
+        category: "libros",
         autor: "Rosa León",
         name: "¿Vieja Yo?",
         price: 30,
@@ -11,7 +11,7 @@ const products = [
     },
     {
         id:2,
-        category: "Libros",
+        category: "libros",
         autor: "Rosa León",
         name: "Me old?",
         price: 30,
@@ -21,7 +21,7 @@ const products = [
     },
     {
         id:3,
-        category: "Ebboks",
+        category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
         price: 5,
@@ -31,7 +31,7 @@ const products = [
     },
     {
         id:4,
-        category: "Ebboks",
+        category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
         price: 5,
@@ -41,7 +41,7 @@ const products = [
     },
     {
         id:5,
-        category: "Ebboks",
+        category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
         price: 5,
@@ -51,7 +51,7 @@ const products = [
     },
     {
         id:6,
-        category: "Ebboks",
+        category: "ebooks",
         autor: "Rosa León",
         name: "¿Estás viviendo tu vida o la de alguien más?",
         price: 5,

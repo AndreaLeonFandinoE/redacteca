@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom"
 import "./Cards.scss"
 const Cards = ({shop}) => {
 
@@ -10,6 +10,7 @@ const Cards = ({shop}) => {
                 <span>{shop.category}</span>
                 <span>{shop.autor}</span>
                 <h5>Precio ${shop.price}</h5>
+                <Link to={`/details/${shop.id}`}><button>Saber más</button></Link>
             </div>
         </div>
     )
