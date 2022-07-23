@@ -24,5 +24,16 @@
 
 h1{
   text-align: center;
-  color: yellowgreen;
 }
+
+button{
+    color: black;
+    background-color: rgba(153, 205, 50, 0.589);
+    border: 0.15rem solid rgba(153, 205, 50, 0.692);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    
+}
+button:hover{
+    background-color: rgba(153, 205, 50, 0.089);
+    }

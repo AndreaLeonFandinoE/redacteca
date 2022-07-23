@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./Forms.scss"
 const Forms = () => {
+
     const registro = () => {
         alert ("Usuario guardado")
     }

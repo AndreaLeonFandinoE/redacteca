@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
 import Forms from "../Forms/Forms.js";
+import Client from "./Client";
 
 const url = "https://62ccbd928042b16aa7d33ae3.mockapi.io/api/users"
-const ListClients = ({children}) => {
+const ListClients = ({children, name, lastname}) => {
 
     const [clients, setClients] = useState([]);
 
@@ -15,13 +16,20 @@ const ListClients = ({children}) => {
     }, [clients]);
 
     const getClients = async () => {
-        await fetch(url)
-        .then((res) => {
-            return res.json()
-        }).then(newRes => {
-            setClients(newRes)
+        const clientList= await fetch(url)
+        .then((res) => res.json())
+        .then((newRes) => {
+            return newRes.res
         }).catch((fall) => console.log(fall))
-    }
+
+    clientList.then((list) => {
+        Promise.all(list.map(async (client) => {
+            return await fetch (client.url).then((res) => res.json())
+            .then((detail => { setClients((detailClient) => {
+                return [...detailClient, {name: detail.name, lastname: detail.lastname}]
+            })}))
+        }))
+    })}
 
     const deleteClient = async (id) => {
         console.log(id);
@@ -35,16 +43,11 @@ const ListClients = ({children}) => {
     <div>
         {children}
         <Forms/>
-        <ul>
         {clients.map((client) => (
-            <li key={client.id}>
-                <span>{client.name}</span>
-                <span>{client.lastname}</span>
-                <span>{client.password}</span>
+            <Client key={client.id}> title={client.name} lastname={lastname}
                 <button onClick={() => deleteClient(client.id)}>Borrar</button>
-            </li>
+            </Client>
         ))}
-        </ul>
     </div>
 )
 }

@@ -1,22 +1,27 @@
-import Count from '../Count/Count.js'
+import ItemCount from '../ItemCount/ItemCount.js'
 import './Item.scss'
+import { useState} from "react";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({shop}) => {
-    const {name, img, alt, category, autor, price, description, stock} = shop
-    
-    const onAdd = (item) => {
-        alert("seleccionaste", item, "shops")
+    const [boton, setBoton] = useState(0)
+
+    const onAdd = (boton) => {
+        setBoton(boton)
+        alert("agregaste", boton, "cantidades");
+        
     }
+
     return (
         <div className="item__detail">
-            <img className="item__img-detail" src={img} alt={alt} />
+            <img className="item__img-detail" src={shop.img} alt={shop.alt} />
             <div className="item__contenido">
-                <h1>{name}</h1>
-                <span>{category}</span>
-                <span>{autor}</span>
-                <h5>Precio ${price}</h5>
-                <p>{description}</p>
-                <Count stock={stock} price={price} onAdd={onAdd}/>
+                <h1>{shop.name}</h1>
+                <span>{shop.category}</span>
+                <span>{shop.autor}</span>
+                <h5>Precio ${shop.price}</h5>
+                <p>{shop.description}</p>
+                {boton === 0 ? <ItemCount stock={shop.stock} price={shop.price} onAdd={onAdd}/> : <Link to="/cart"><button>Ver carrito</button></Link>}
             </div>
         </div>
     )
