@@ -15,7 +15,7 @@ const Forms = () => {
     const handleChange =(e) => {
         setForm({
             ...form,
-        [e.target.name] : e.tarhet.value})
+        [e.target.name] : e.target.value})
     }
     return (
         

@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import "./Count.scss"
+import Modal from "../Modal/Modal.js"
 const ItemCount = ({children, stock, initial = 0, price, onAdd}) => {
 
     const [boton, setBoton] = useState (initial)
@@ -15,6 +16,8 @@ const ItemCount = ({children, stock, initial = 0, price, onAdd}) => {
         }
     }
 
+    const [modal, setModal] = useState(false);
+
     return (
         <>
         <div className='count'>
@@ -26,7 +29,9 @@ const ItemCount = ({children, stock, initial = 0, price, onAdd}) => {
             <div className='count__total'>
                 <span>Total = $ {boton * price}</span>
                 {children}
-                <button onClick={() => onAdd(boton)}>Agregar al carrito</button>
+                {/* <button onClick={() => onAdd(boton)}>Agregar al carrito</button>  */}
+                <button onClick={() =>setModal(true)}>Agregar al carrito</button>
+                {modal && <Modal cancel={setModal}/>}
             </div>
         </div>
         </>
