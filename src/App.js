@@ -6,7 +6,8 @@ import Button from './components/ItemCount/Button.js';
 import ItemCount from './components/ItemCount/ItemCount.js';
 import ListClients from './components/ListClients/ListClients.js';
 import ItemDetailContainer from "./components/ItemCards/ItemDetailContainer.js";
-import ItemListContainer from "./components/ItemCards/ItemListContainer.js"
+import ItemListContainer from "./components/ItemCards/ItemListContainer.js";
+import Provider from './context/cartContext'
 
 
 function App() {
@@ -20,27 +21,25 @@ function App() {
 
   return (
     <div className="App">
-  
-    <BrowserRouter>
-      <NavBar numero={numero}/>
-      <Routes>
-        
-        <Route path="contacto" element={
-          <ListClients> 
-            <h1>Registrate</h1>
-          </ListClients>} />
-        <Route path="cart" element={
-          <ItemCount Count >
-            <Button product="Agregar al carrito" cart={cart}/>
-          </ItemCount >} />
-          <Route path="*" element={<div>404 La página no existe</div>} />
-
-          <Route path="/" element={<ItemListContainer titulo="Venta de libros y Ebooks"/>} />
-          <Route path="details/:id" element={<ItemDetailContainer/>}/>
-          <Route path="category/:category" element={<ItemListContainer titulo="Venta de libros y Ebooks"/>}/>
-
-      </Routes>
-    </BrowserRouter>
+      <Provider>
+        <BrowserRouter>
+          <NavBar numero={numero}/>
+          <Routes>
+            <Route path="contacto" element={
+              <ListClients> 
+                <h1>Registrate</h1>
+              </ListClients>} />
+            <Route path="cart" element={
+              <ItemCount Count >
+                <Button product="Agregar al carrito" cart={cart}/>
+              </ItemCount >} />
+              <Route path="*" element={<div>404 La página no existe</div>} />
+              <Route path="/" element={<ItemListContainer titulo="Venta de libros y Ebooks"/>} />
+              <Route path="details/:id" element={<ItemDetailContainer/>}/>
+              <Route path="category/:category" element={<ItemListContainer titulo="Venta de libros y Ebooks"/>}/>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }
