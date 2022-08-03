@@ -21,7 +21,7 @@ const Forms = () => {
         
         <form className="forms">
             <input className="forms__input" type="text" name="name" placeholder="Escriba su nombre" value={form.name} onChange={handleChange}></input>
-            <input className="forms__input" type="text" name="lastname" placeholder="Escriba su apelolido" value={form.lastname} onChange={handleChange}></input>
+            <input className="forms__input" type="text" name="lastname" placeholder="Escriba su apellido" value={form.lastname} onChange={handleChange}></input>
             <input className="forms__input" type="text" name="password" placeholder="Escriba una contraseña" value={form.password} onChange={handleChange}></input>
             <button onClick={registro}>Registrate</button>
         </form>

@@ -7,11 +7,12 @@ const Provider = (props) => {
 
     useEffect(() => {
         console.log(cart);
+        localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart]);
 
-    const addToCart = (shop, quantity) => {
+    const addItem = (shop, quantity) => {
 
-        if (ifCart(shop.id)) {
+        if (isInCart(shop.id)) {
             alert ("Este producto se encuentra en el carrito")
         } else {
             setCart([...cart, {...shop, quantity}])
@@ -19,12 +20,21 @@ const Provider = (props) => {
 
     }
 
-    const ifCart= (id) => {
-        return cart.some((valor) => valor.id === id)
+    const isInCart= (id) => {
+        return cart.some((shop) => shop.id === id)
     }
 
+    const removeItem = (id) => {
+        const producs = cart.filter((item) => item.id !== id);
+        setCart(producs);
+    };
+
+    const clearAll = () => {
+        setCart([]);
+    };
+
     return (
-        <cartContext.Provider value={{cart, addToCart}}>
+        <cartContext.Provider value={{cart, addItem, clearAll, removeItem}}>
             {props.children}
         </cartContext.Provider>
     )

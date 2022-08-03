@@ -24,8 +24,9 @@ const NavBar = ({numero}) => {
                     to="/contacto">Contacto</NavLink>
                 </li>
                 <li>
-                    <NavLink className='cart' to="/cart">{numero}</NavLink>
-                    <CartWidget/>
+                    <NavLink  to="/cart">
+                        <CartWidget/> {numero}
+                    </NavLink>
                 </li>
             </ul>
         </nav>
