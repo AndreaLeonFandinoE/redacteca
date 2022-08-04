@@ -1,0 +1,22 @@
+.cart{
+    display: flex;
+    margin: 2rem;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        padding: 1rem;
+        align-items: center;
+        border: 0.2rem solid rgb(207, 207, 207);
+    }
+    &__img{
+        width: 10vw;
+    }
+    &__total{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 0.2rem solid rgb(59, 58, 58);
+    }
+}

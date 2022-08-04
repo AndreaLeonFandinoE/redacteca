@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import products from "../../products/products.js"
 import ItemList from './ItemList.js';
 import Loader from '../Loader/Loader.js'
+import "./Item.scss"
 const ItemListContainer = ({titulo}) => {
 
     const [shops, setShops] = useState([]);
@@ -24,7 +25,9 @@ const ItemListContainer = ({titulo}) => {
     }, [category]);
 
     return (
-    <>{ loader ? <Loader/> : <ItemList shops={shops}/>}</>
+    <>
+    <h1 className={ loader ? "titulo" : "titulo__cargando"}>{titulo}</h1>
+    { loader ? <Loader/> : <ItemList shops={shops}/>}</>
     )
 }
 

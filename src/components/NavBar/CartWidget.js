@@ -1,10 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen} from "@fortawesome/free-solid-svg-icons"
+import {cartContext}  from '../../context/cartContext';
+import React, { useContext } from 'react';
 
 const CartWidget = () => {
+
+    const { cart} = useContext(cartContext);
     return (
-    <FontAwesomeIcon className="cart" icon={faBookOpen} />
+    <>
+    {cart.length === 0 ? <FontAwesomeIcon className="cartWidget" icon={faBookOpen} /> : <> <FontAwesomeIcon className="cartWidget" icon={faBookOpen} /> {cart.length}</> }
+    
+    </>
     )
+    
 }
 
 // const CartWidget = () => {

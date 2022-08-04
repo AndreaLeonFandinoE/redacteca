@@ -24,7 +24,12 @@ const ItemDetail = ({shop}) => {
                 <span>{shop.autor}</span>
                 <h5>Precio ${shop.price}</h5>
                 <p>{shop.description}</p>
-                {quantity === 0 ? <ItemCount stock={shop.stock} price={shop.price} onAdd={onAdd}/> : <Link to="/cart"><button>Ver carrito</button></Link>}
+                {quantity === 0 ? 
+                    <ItemCount stock={shop.stock} price={shop.price} onAdd={onAdd}/> 
+                    : 
+                    <Link to="/cart"><button>Terminar de comprar</button></Link>
+                }
+                <Link to="/"><button>Seguir comprando</button></Link>
             </div>
         </div>
     )

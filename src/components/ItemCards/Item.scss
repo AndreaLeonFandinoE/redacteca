@@ -44,3 +44,19 @@
         border-radius: 0.5rem;
     }
 }
+
+.titulo{
+    color: red;
+    text-align: center;
+    margin: 2rem;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    &__cargando{
+        color: rgb(132, 177, 43);
+        text-align: center;
+        margin: 2rem;
+        padding-top: 2rem;
+        font-size: 2.5rem;
+    }
+}

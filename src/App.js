@@ -36,9 +36,9 @@ function App() {
                 <Button product="Agregar al carrito" cart={cart}/>
               </ItemCount >} /> */}
               <Route path="*" element={<div>404 La página no existe</div>} />
-              <Route path="/" element={<ItemListContainer titulo="Venta de libros y Ebooks"/>} />
+              <Route path="/" element={<ItemListContainer titulo="RedacTeca: Tu biblioteca virtual de ebooks y libros "/>} />
               <Route path="details/:id" element={<ItemDetailContainer/>}/>
-              <Route path="category/:category" element={<ItemListContainer titulo="Venta de libros y Ebooks"/>}/>
+              <Route path="category/:category" element={<ItemListContainer/>}/>
               <Route path="/cart" element={<Cart/>} />
           </Routes>
         </BrowserRouter>

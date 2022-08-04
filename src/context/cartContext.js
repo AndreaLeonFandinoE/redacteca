@@ -4,9 +4,17 @@ export const cartContext = createContext()
 
 const Provider = (props) => {
     const [cart, setCart] = useState([]);
+    const [total, setTotal] = useState(0);
+
+    const totalCart = () => {
+        let total = 0
+        cart.forEach(item => total += (item.price*item.stock))
+        setTotal(total)
+    }
 
     useEffect(() => {
         console.log(cart);
+        totalCart()
         localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart]);
 
@@ -25,8 +33,8 @@ const Provider = (props) => {
     }
 
     const removeItem = (id) => {
-        const producs = cart.filter((item) => item.id !== id);
-        setCart(producs);
+        const itemFiltered = cart.filter((item) => item.id !== id);
+        setCart(itemFiltered);
     };
 
     const clearAll = () => {
@@ -34,7 +42,7 @@ const Provider = (props) => {
     };
 
     return (
-        <cartContext.Provider value={{cart, addItem, clearAll, removeItem}}>
+        <cartContext.Provider value={{cart, addItem, clearAll, removeItem, total}}>
             {props.children}
         </cartContext.Provider>
     )
