@@ -8,9 +8,9 @@ const Item = ({name, img, alt, category, autor, price, id}) => {
             <img className="item__img" src={img} alt={alt} />
             <div className="item__contenido">
                 <h4>{name}</h4>
-                <span>{category}</span>
-                <span>{autor}</span>
                 <h5>Precio ${price}</h5>
+                <span>Categoría: {category}</span>
+                <span>Escrito por: {autor}</span>
                 <Link to={`/details/${id}`}><button>Saber más</button></Link>
             </div>
         </div>
