@@ -1,12 +1,12 @@
 import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import {doc, getDoc, getFirestore, limit, query, where} from "firebase/firestore"
+import {doc, getDoc, getFirestore} from "firebase/firestore"
 import Loader from '../Loader/Loader.js'
 import ItemDetail from "./ItemDetail.js";
 const ItemDetailContainer = () => {
 
     const {id} = useParams()
-    const [shop, setShop] = useState();
+    const [shop, setShop] = useState({});
     const [loader, setLoader] = useState(true)
     
     useEffect( () => {
@@ -14,9 +14,9 @@ const ItemDetailContainer = () => {
 
         const shopDoc = doc (db, "shops", id)
 
-        getDoc(shopDoc).then((snapshot) => {
-            console.log(snapshot.data);
-            setShop(snapshot.data())
+        getDoc(shopDoc).then((res) => {
+            console.log({id: res.id, ...res.data()});
+            setShop({id: res.id, ...res.data()})
             setLoader(false)
         })
     }, [id])

@@ -2,14 +2,15 @@ import {createContext, useState, useEffect} from 'react'
 
 export const cartContext = createContext()
 
-const Provider = (props) => {
+const Provider = ({children}) => {
     const [cart, setCart] = useState([]);
-    const [total, setTotal] = useState(0);
+    
+    const totalPrice = () => {
+        return cart.reduce((acc, item) => acc + item.quantity * item.price, 0)
+    }
 
     const totalCart = () => {
-        let total = 0
-        cart.forEach(item => total += (item.price*item.stock))
-        setTotal(total)
+        return cart.reduce((accumulator, itemTotal) => accumulator + itemTotal.quantity, 0)
     }
 
     useEffect(() => {
@@ -21,7 +22,9 @@ const Provider = (props) => {
     const addItem = (shop, quantity) => {
 
         if (isInCart(shop.id)) {
-            alert ("Este producto se encuentra en el carrito")
+            setCart(cart.map(item => {
+                return item.id === shop.id ? {...item, quantity: item.quantity + quantity} : item
+            }))
         } else {
             setCart([...cart, {...shop, quantity}])
         }
@@ -29,7 +32,7 @@ const Provider = (props) => {
     }
 
     const isInCart= (id) => {
-        return cart.some((shop) => shop.id === id)
+        return cart.some((shop) => shop.id === id) ? true : false
     }
 
     const removeItem = (id) => {
@@ -42,8 +45,8 @@ const Provider = (props) => {
     };
 
     return (
-        <cartContext.Provider value={{cart, addItem, clearAll, removeItem, total}}>
-            {props.children}
+        <cartContext.Provider value={{cart, isInCart, addItem, clearAll, removeItem, totalPrice, totalCart}}>
+            {children}
         </cartContext.Provider>
     )
 }

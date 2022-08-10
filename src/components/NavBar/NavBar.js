@@ -1,10 +1,10 @@
 import './NavBar.scss'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import CartWidget from './CartWidget'
-const NavBar = ({numero}) => {
+const NavBar = () => {
     return <header>
         
-        <img src="https://res.cloudinary.com/andrealeonfandino/image/upload/v1658416498/samples/redacteca/book-2028349_1280_qykxed.png" alt="logo" />
+        <Link to="/"><img src="https://res.cloudinary.com/andrealeonfandino/image/upload/v1658416498/samples/redacteca/book-2028349_1280_qykxed.png" alt="logo" /></Link>
         <nav>
             <ul>
                 <li>
@@ -24,8 +24,8 @@ const NavBar = ({numero}) => {
                     to="/contacto">Contacto</NavLink>
                 </li>
                 <li>
-                    <NavLink  to="/cart">
-                        <CartWidget/> {numero}
+                    <NavLink to="/cart">
+                        <CartWidget/>
                     </NavLink>
                 </li>
             </ul>

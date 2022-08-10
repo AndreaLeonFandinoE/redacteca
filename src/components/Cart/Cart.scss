@@ -1,21 +1,24 @@
 .cart{
     display: flex;
+    flex-direction: column;
     margin: 2rem;
     &__container{
         display: flex;
-        flex-direction: column;
-        margin: 2rem;
-        padding: 1rem;
         align-items: center;
         border: 0.2rem solid rgb(207, 207, 207);
+        padding: 0.5rem;
+        text-align: center;
     }
     &__img{
-        width: 10vw;
+        width: 7vw;
+        margin-right: 2rem;
     }
     &__total{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
         justify-content: center;
         border: 0.2rem solid rgb(59, 58, 58);
     }

@@ -1,11 +1,29 @@
 import React, { useContext } from 'react';
+import { addDoc, collection, getFirestore} from 'firebase/firestore'
 import { Link } from 'react-router-dom';
 import {cartContext}  from '../../context/cartContext';
 import "./Cart.scss"
 
 const Cart = () => {
 
-    const { cart, clearAll, removeItem, total } = useContext(cartContext);
+    const { cart, clearAll, removeItem, totalPrice} = useContext(cartContext);
+
+    const order = {
+        buyer: {name: "Andrea", phone: 1137970044, email: "andrealeonfandino@gmail.com"},
+        shops: cart.map((item) => ({name: item.name, price: item.price, quantity: item.quantity, id: item.id})),
+        total: totalPrice(),
+        
+    }
+
+    const shoppingCart = () => {
+        const db = getFirestore()
+        const ordersCollection = collection(db, "orders")
+        addDoc(ordersCollection, order).then((res) => {
+            console.log(res);
+        }).catch((error) => {
+            console.log(error);
+        })
+    };
 
     if (cart.length === 0) {
         return (
@@ -29,16 +47,18 @@ const Cart = () => {
                 <div className='cart__container' key={item.id}>
                     <img className='cart__img' src={item.img} alt={item.name} />
                     <div>
-                        <h2>{item.name}</h2>
-                        <h2>Precio: $ {item.price}</h2>
+                        <p>{item.name}</p>
+                        <p>Precio: $ {item.price}</p>
+                        <p>Cantidad: {item.quantity}</p>
+                        <p>Subtotal: $ {item.quantity * item.price}</p>
+                        <button onClick={() => removeItem(item.id)}>Eliminar</button>
                     </div>
-                    <button onClick={() => removeItem(item.id)}>Eliminar este producto</button>
-                    <span>Agregaste {item.quantity} productos de "{item.name}"</span>
                 </div>
             ))}
             <div className='cart__total'>
                 <button onClick={clearAll}>Eliminar todos los productos</button>
-                <h3>Total: $ {total}</h3>
+                <h3>Total: $ {totalPrice()}</h3>
+                <button onClick={shoppingCart}>Finalizar compra</button>
             </div>
         </div>
         

@@ -5,10 +5,13 @@ import React, { useContext } from 'react';
 
 const CartWidget = () => {
 
-    const { cart} = useContext(cartContext);
+    const { totalCart } = useContext(cartContext);
     return (
     <>
-    {cart.length === 0 ? <FontAwesomeIcon className="cartWidget" icon={faBookOpen} /> : <> <FontAwesomeIcon className="cartWidget" icon={faBookOpen} /> {cart.length}</> }
+    
+    <FontAwesomeIcon className="cartWidget" icon={faBookOpen} />
+    <span>{ totalCart() || "" }</span>
+    
     
     </>
     )

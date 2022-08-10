@@ -1,0 +1,21 @@
+.error{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem;
+    justify-items: center;
+    align-items: center;
+    &__404{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    &__img{
+        height: 35rem;
+        margin: 2rem;
+    }
+    &__logo{
+        width: 20rem;
+        padding-bottom: 2rem;
+    }
+}
