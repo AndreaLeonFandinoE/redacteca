@@ -1,13 +1,17 @@
 .forms{
     display: flex;
     flex-direction: column;
-    margin: 2rem;
-    padding: 2rem;
-    align-items: center;
-    &__input{
     border: 0.2rem solid yellowgreen;
-    color: yellowgreen;
+    border-radius: 0.5rem;
+    background-color: rgba(153, 205, 50, 0.205);
+    margin: 2rem auto;
     padding: 1rem;
+    gap: 1rem;
+    width: 50%;
+    &__input{
+    padding: 0.5rem;
     text-align: center;
+    border: 0.1rem solid yellowgreen;
+    border-radius: 0.5rem;
     }
 }

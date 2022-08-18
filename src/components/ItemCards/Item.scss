@@ -1,6 +1,6 @@
 .item{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
         justify-content: center;
     }
     &__img{
-        width: 20rem;
+        height: 20rem;
         border-radius: 0.5rem;
         align-self: center;
     }

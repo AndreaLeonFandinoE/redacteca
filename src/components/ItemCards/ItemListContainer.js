@@ -13,18 +13,15 @@ const ItemListContainer = ({titulo}) => {
 
     useEffect( () => {
         const db = getFirestore()
-        let  q;
-
-        if (category) {
-            q = query(collection(db, "shops"), where("category", "==", category ))
-        } else {
-            q = collection (db, "shops")
-        }
-
+        let q = category 
+        ? 
+        query(collection(db, "shops"), where("category", "==", category) )
+        : 
+        collection(db, "shops")
+        
         getDocs(q).then((res) => {
             const dataExtraida = res.docs.map((datos) => ({id: datos.id, ...datos.data()}) ) 
             setShops(dataExtraida)
-            console.log(res);
             setLoader(false)
         })
 

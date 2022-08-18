@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
         const shopDoc = doc (db, "shops", id)
 
         getDoc(shopDoc).then((res) => {
-            console.log({id: res.id, ...res.data()});
             setShop({id: res.id, ...res.data()})
             setLoader(false)
         })

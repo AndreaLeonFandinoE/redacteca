@@ -12,7 +12,6 @@ const ItemDetail = ({shop}) => {
     const onAdd = (quantity) => {
         setQuantity(quantity)
         addItem(shop, quantity)
-        
     }
 
     return (
@@ -27,7 +26,15 @@ const ItemDetail = ({shop}) => {
                 {quantity === 0 ? 
                     <ItemCount stock={shop.stock} price={shop.price} onAdd={onAdd}/> 
                     : 
-                    <Link to="/cart"><button>Terminar de comprar</button></Link>
+                    <>
+                    <Link to="/cart">
+                        <button>Ir al carrito</button>
+                    </Link>
+                    <span>
+                        Añadiste {quantity} {shop.category} de <strong>{shop.name}</strong> al carrito.
+                    </span>
+                    
+                    </>
                 }
                 <Link to="/"><button>Seguir comprando</button></Link>
             </div>

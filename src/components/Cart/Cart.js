@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { addDoc, collection, getFirestore} from 'firebase/firestore'
+import React, { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import {cartContext}  from '../../context/cartContext';
 import "./Cart.scss"
@@ -7,23 +6,6 @@ import "./Cart.scss"
 const Cart = () => {
 
     const { cart, clearAll, removeItem, totalPrice} = useContext(cartContext);
-
-    const order = {
-        buyer: {name: "Andrea", phone: 1137970044, email: "andrealeonfandino@gmail.com"},
-        shops: cart.map((item) => ({name: item.name, price: item.price, quantity: item.quantity, id: item.id})),
-        total: totalPrice(),
-        
-    }
-
-    const shoppingCart = () => {
-        const db = getFirestore()
-        const ordersCollection = collection(db, "orders")
-        addDoc(ordersCollection, order).then((res) => {
-            console.log(res);
-        }).catch((error) => {
-            console.log(error);
-        })
-    };
 
     if (cart.length === 0) {
         return (
@@ -58,7 +40,7 @@ const Cart = () => {
             <div className='cart__total'>
                 <button onClick={clearAll}>Eliminar todos los productos</button>
                 <h3>Total: $ {totalPrice()}</h3>
-                <button onClick={shoppingCart}>Finalizar compra</button>
+                <Link to="/contacto"><button>Finalizar compra</button></Link>
             </div>
         </div>
         

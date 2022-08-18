@@ -1,5 +1,4 @@
 import Item from'./Item.js'
-import { addDoc, collection, getFirestore} from 'firebase/firestore'
 const ItemList = ({shops}) => {
 
     return (

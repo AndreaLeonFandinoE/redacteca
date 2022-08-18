@@ -14,8 +14,6 @@ const Provider = ({children}) => {
     }
 
     useEffect(() => {
-        console.log(cart);
-        totalCart()
         localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart]);
 
