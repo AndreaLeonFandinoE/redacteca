@@ -1,6 +1,6 @@
 # RedacTeca  :fa-star:
 
-Proyecto del curso de **React JS **de la carrera *Front End Developer*
+Proyecto del curso de **React JS** de la carrera *Front End Developer*
 
 > "RedacTeca"
 **Redac**~~ción~~ - ~~Biblio~~**teca**
@@ -43,7 +43,7 @@ Es un espacio en donde los redactores aficionados pueden publicar sus escritos e
 > Clonar repositorio
 
 ```bash
-  git clone https://github.com/andrealeonfandinof/redacteca.git
+  git clone https://github.com/andrealeonfandinoe/redacteca.git
 ```
 > Ir a la carpeta
 
