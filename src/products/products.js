@@ -20,16 +20,6 @@ const products = [
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678207/samples/redacteca/libro1.1_l9glyr.jpg",
     },
     {
-        id:"3",
-        category: "ebooks",
-        autor: "Rosa León",
-        name: "¿Estás viviendo tu vida o la de alguien más?",
-        price: 4.99,
-        stock: 10,
-        description: "Hemos creado un e-book con algunas características que te pueden ayudar a revisar si estás o no viviendo tu propia vida. Todos queremos vivir la vida que soñamos, sin embargo con el tiempo nos dejamos envolver por las personas que nos rodean y comenzamos a adoptar posturas y actitudes que no son realmente nuestras y vamos perdiendo nuestra esencia. También te incluimos un ejercicio de preguntas poderosas para que inicies tu proceso de autoconocimiento.",
-        img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1657678208/samples/redacteca/ebook1_lrvypt.png",
-    },
-    {
         id:"4",
         category: "ebooks",
         autor: "Rosa León",
