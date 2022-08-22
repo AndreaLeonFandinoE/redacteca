@@ -1,4 +1,4 @@
-# RedacTeca  :fa-star:
+# RedacTeca:
 
 Proyecto del curso de **React JS** de la carrera *Front End Developer*
 
@@ -17,7 +17,7 @@ Proyecto del curso de **React JS** de la carrera *Front End Developer*
 > "RedacTeca"
 Es un espacio en donde los redactores aficionados pueden publicar sus escritos en una biblioteca virtual, en la cual otros amantes de la literatura van a poder comprar sus ebooks y libros favoritos. Teniendo la posibilidad de encontrar bibliografías alternativas o ediciones limitadas directas del autor。
 
-`<link>` : <https://https://github.com/AndreaLeonFandinoE/redacteca>
+`<link>` : <https://AndreaLeonFandinoE.github.io/redacteca/>
 
 | `name()` | RedacTeca                  |
 | ------------- | ------------------------------ |
@@ -25,7 +25,7 @@ Es un espacio en donde los redactores aficionados pueden publicar sus escritos e
 | `category()`   | **Ebooks**     |
 ----
 
-###Dependencias Instaladas  :fa-gear: :
+###Dependencias Instaladas:
 
 - [x] Sass
 - [x] Firebase
