@@ -1,4 +1,4 @@
-# RedacTeca:
+# RedacTeca
 
 Proyecto del curso de **React JS** de la carrera *Front End Developer*
 
@@ -25,7 +25,7 @@ Es un espacio en donde los redactores aficionados pueden publicar sus escritos e
 | `category()`   | **Ebooks**     |
 ----
 
-###Dependencias Instaladas:
+### Dependencias Instaladas:
 
 - [x] Sass
 - [x] Firebase
@@ -36,7 +36,6 @@ Es un espacio en donde los redactores aficionados pueden publicar sus escritos e
 - [x] react-hook-form
 - [x] react-router-dom
 - [x] gh-pages
-
 ------------
 
 ### Comandos para ejecutar localmente el proyecto
