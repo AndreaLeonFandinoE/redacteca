@@ -3,12 +3,17 @@ footer{
     padding: 1rem;
     section{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: space-around;
         align-items: center;
+        gap: 1rem;
     }
     h1{
         color: yellowgreen;
+    }
+    img{
+        height: 6vh;
+        margin-right: 1rem;
     }
     span{
         color: white;
