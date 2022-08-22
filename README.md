@@ -1,4 +1,4 @@
-# **[RedacTeca](https://redacteca.netlify.app/)** :tw-1f4da:
+# **[RedacTeca](https://redacteca.netlify.app/)**
 
 Proyecto del curso de **React JS** de la carrera *Front End Developer* en [CoderHouse](https://www.coderhouse.com/online/reactjs)
 
@@ -14,7 +14,7 @@ Proyecto del curso de **React JS** de la carrera *Front End Developer* en [Coder
 
 ------------
 
-> "  [Redacteca](https://redacteca.netlify.app/)"  :tw-1f4d6:
+> "  [Redacteca](https://redacteca.netlify.app/)" 
 Es un espacio en donde los redactores aficionados pueden publicar sus escritos en una biblioteca virtual, en la cual otros amantes de la literatura van a poder comprar sus ebooks y libros favoritos. Teniendo la posibilidad de encontrar bibliografías alternativas o ediciones limitadas directas del autor。
 
 `<link>` : <https://redacteca.netlify.app/>
