@@ -11,19 +11,15 @@ const ItemDetailContainer = () => {
     
     useEffect( () => {
         const db = getFirestore()
-
         const shopDoc = doc (db, "shops", id)
-
         getDoc(shopDoc).then((res) => {
             setShop({id: res.id, ...res.data()})
             setLoader(false)
         })
     }, [id])
 
-
     return (
         <>{ loader ? <Loader/> : <ItemDetail shop={shop}/>}</>
-        
     )
 }
 

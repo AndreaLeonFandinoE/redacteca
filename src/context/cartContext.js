@@ -3,6 +3,7 @@ import {createContext, useState, useEffect} from 'react'
 export const cartContext = createContext()
 
 const Provider = ({children}) => {
+    
     const [cart, setCart] = useState([]);
     
     const totalPrice = () => {
@@ -18,7 +19,6 @@ const Provider = ({children}) => {
     }, [cart]);
 
     const addItem = (shop, quantity) => {
-
         if (isInCart(shop.id)) {
             setCart(cart.map(item => {
                 return item.id === shop.id ? {...item, quantity: item.quantity + quantity} : item
@@ -26,7 +26,6 @@ const Provider = ({children}) => {
         } else {
             setCart([...cart, {...shop, quantity}])
         }
-
     }
 
     const isInCart= (id) => {

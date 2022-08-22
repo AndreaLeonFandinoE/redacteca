@@ -89,7 +89,6 @@ const products = [
         description: "Soy mujer, hija, madre, esposa y venezolana de nacimiento. Como muchos compatriotas salí de mi tierra en busca de una mejor calidad de vida. Esta es parte de mi historia como migrante. He sido afortunada, no me ha tocado caminar ni dormir en el frío como lo están haciendo muchos de mis hermanos venezolanos en este momento. Con estos pasajes solo quiero contar un poco de lo que he vivido y aprendido los últimos cinco años. A lo mejor lo que necesito es exorcizar demonios de tristeza, impotencia, añoranzas y algunas veces soledad; o solo quiero dar gracias porque las circunstancias me han enseñado muchas cosas en esta etapa de mi vida. Cualquiera que sea la razón es a través de estos pasajes donde he encontrado la manera de hacerlo y espero que alguien los lea y me entienda.",
         img: "https://res.cloudinary.com/andrealeonfandino/image/upload/v1660103597/samples/redacteca/51DFXrpiy6L._SY346__c62lwu.jpg",
     },
-
-    
 ]
+
 export default products

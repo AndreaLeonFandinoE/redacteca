@@ -1,0 +1,16 @@
+footer{
+    background: rgb(100, 138, 26);
+    padding: 1rem;
+    section{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    h1{
+        color: yellowgreen;
+    }
+    span{
+        color: white;
+    }
+}

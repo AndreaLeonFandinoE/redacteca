@@ -11,16 +11,15 @@ export const FormsItem = (forms) => {
 
     const [form, setForm] = useState(forms);
     
-    const modalMessage = (id) => {
+    const modalMessage = () => {
         Swal.fire({
-            title: "Gracias por registrate",
-            text: `Su Orden: ${id} ha sido realizada con éxito!`,
-            html: `<p>Creado el ${new Date().getDay}</p>`,
+            title: `¡Hola ${form.name}!`,
+            text: "Gracias por registrate, te estaremos contactando al correo que ingresaste.",
             icon: "success",
             confirmButtonText: "OK",
-            // timer: 5000,
-            footer: "Estas en RedacTeca",
-            position: "center"
+            footer: `RedacTeca - ${new Date().getHours()}:${new Date().getMinutes()} - ${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
+            position: "center",
+            confirmButtonColor: "rgba(153, 205, 50, 0.589)",
         })
     };
 
@@ -49,7 +48,6 @@ export const FormsItem = (forms) => {
 
 
     return (
-            {handleChange, form, updateOrder, modalMessage}
-        
+        {handleChange, form, updateOrder, modalMessage}
     );
 };

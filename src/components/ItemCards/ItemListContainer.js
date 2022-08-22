@@ -18,19 +18,17 @@ const ItemListContainer = ({titulo}) => {
         query(collection(db, "shops"), where("category", "==", category) )
         : 
         collection(db, "shops")
-        
         getDocs(q).then((res) => {
             const dataExtraida = res.docs.map((datos) => ({id: datos.id, ...datos.data()}) ) 
             setShops(dataExtraida)
             setLoader(false)
         })
-
     }, [category])
 
     return (
     <>
-    <h1 className={ loader ? "titulo" : "titulo__cargando"}>{titulo}</h1>
-    { loader ? <Loader/> : <ItemList shops={shops}/>}
+        <h1 className={ loader ? "titulo" : "titulo__cargando"}>{titulo}</h1>
+        { loader ? <Loader/> : <ItemList shops={shops}/>}
     </>
     )
 }

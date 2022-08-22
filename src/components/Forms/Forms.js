@@ -1,7 +1,17 @@
-import { Fragment} from "react"
+import { Fragment, useState, useEffect} from "react"
 import { FormsItem } from "./FormsItem.js"
+import Loader from '../Loader/Loader.js'
 import "./Forms.scss"
 const Forms = () => {
+
+    const [loader, setLoader] = useState(true)
+
+    useEffect( () => {
+        setLoader(true)
+        setTimeout(() => {
+            setLoader(false)
+        },1000)
+    }, [])
 
     const forms = {
         name: "",
@@ -19,9 +29,11 @@ const Forms = () => {
     }
 
     return (
-        <>
         <Fragment>
-            <form className="forms" onSubmit={sendForm}>
+            {
+                loader ? <Loader/> 
+                : 
+                <form className="forms" onSubmit={sendForm}>
                     <input className="forms__input" type="text" name="name" placeholder="Escriba su nombre" 
                         value={form.name} onChange={handleChange}
                     />
@@ -35,14 +47,14 @@ const Forms = () => {
                         value={form.password} onChange={handleChange}
                     />
                     <div>Nunca compartiremos tus datos.</div>
-                <div >
-                    <input type="checkbox" />
-                    <label>Recordarme</label>
-                </div>
-                <button onClick={modalMessage} type="submit">Registrarme</button>
-            </form>
+                    <div>
+                        <input type="checkbox" />
+                        <label>Recordarme</label>
+                    </div>
+                    <button onClick={modalMessage} type="submit">Registrarme</button>
+                </form>
+            }
         </Fragment>
-        </>
     )
 }
 
