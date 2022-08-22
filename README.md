@@ -1,6 +1,6 @@
-# RedacTeca
+# **[RedacTeca](https://redacteca.netlify.app/)**
 
-Proyecto del curso de **React JS** de la carrera *Front End Developer*
+Proyecto del curso de **React JS** de la carrera *Front End Developer* en [CoderHouse](https://www.coderhouse.com/online/reactjs)
 
 > "RedacTeca"
 **Redac**~~ción~~ - ~~Biblio~~**teca**
@@ -14,9 +14,10 @@ Proyecto del curso de **React JS** de la carrera *Front End Developer*
 
 ------------
 
-> "RedacTeca"
+> "  [Redacteca](https://redacteca.netlify.app/)"
 Es un espacio en donde los redactores aficionados pueden publicar sus escritos en una biblioteca virtual, en la cual otros amantes de la literatura van a poder comprar sus ebooks y libros favoritos. Teniendo la posibilidad de encontrar bibliografías alternativas o ediciones limitadas directas del autor。
 
+`<link>` : <https://redacteca.netlify.app/>
 
 
 | Nombre | RedacTeca                  |
@@ -35,7 +36,6 @@ Es un espacio en donde los redactores aficionados pueden publicar sus escritos e
 - [x] react-dom
 - [x] react-hook-form
 - [x] react-router-dom
-- [x] gh-pages
 ------------
 
 ### Comandos para ejecutar localmente el proyecto
@@ -60,6 +60,7 @@ Es un espacio en donde los redactores aficionados pueden publicar sus escritos e
   npm run start
 ```
 Abrir [http://localhost:3000](http://localhost:3000)
+`<link>` : <https://redacteca.netlify.app/>
 
 ------------
 &copy; 2022
