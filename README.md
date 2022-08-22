@@ -10,7 +10,7 @@ Proyecto del curso de **React JS** de la carrera *Front End Developer* en [Coder
 
 > Proceso de compra en RedacTeca
 
-![](src/RedacTeca.gif)
+![](public/RedacTeca.gif)
 
 ------------
 
