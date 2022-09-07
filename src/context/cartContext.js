@@ -14,6 +14,10 @@ const Provider = ({children}) => {
         return cart.reduce((accumulator, itemTotal) => accumulator + itemTotal.quantity, 0)
     }
 
+    const clearCart = () => {
+        setCart([]);
+    }
+
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart]);
@@ -42,7 +46,7 @@ const Provider = ({children}) => {
     };
 
     return (
-        <cartContext.Provider value={{cart, isInCart, addItem, clearAll, removeItem, totalPrice, totalCart}}>
+        <cartContext.Provider value={{cart, isInCart, addItem, clearAll, removeItem, totalPrice, totalCart, clearCart}}>
             {children}
         </cartContext.Provider>
     )

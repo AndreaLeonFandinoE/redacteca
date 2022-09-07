@@ -20,7 +20,7 @@ const Forms = () => {
         password: "",
     };
 
-    const { form, handleChange, modalMessage} = FormsItem(
+    const { form, handleChange, updateOrder} = FormsItem(
         forms,
     );
 
@@ -51,7 +51,7 @@ const Forms = () => {
                         <input type="checkbox" />
                         <label>Recordarme</label>
                     </div>
-                    <button onClick={modalMessage} type="submit">Registrarme</button>
+                    <button onClick={updateOrder} type="submit">Registrarme</button>
                 </form>
             }
         </Fragment>

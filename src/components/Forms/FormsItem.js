@@ -7,7 +7,7 @@ import "./Forms.scss"
 
 export const FormsItem = (forms) => {
 
-    const { cart, totalPrice} = useContext(cartContext);
+    const { cart, totalPrice, clearCart} = useContext(cartContext);
 
     const [form, setForm] = useState(forms);
     
@@ -42,7 +42,8 @@ export const FormsItem = (forms) => {
         const ordersCollection = collection(db, "orders")
         addDoc(ordersCollection, order)
         .then(({id}) => {
-            modalMessage(id)
+            clearCart();
+            modalMessage(id);
         })
     };
 
